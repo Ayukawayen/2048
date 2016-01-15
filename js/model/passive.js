@@ -32,7 +32,6 @@ Passive.prototype.onCreated = function() {
 		this.effects[i] = new Effect(this.effects[i]);
 	}
 	for(var i=0;i<this.conds.length;++i) {
-console.log(this.conds[i]);
 		for(var si=0;si<this.conds[i].length;++si) {
 			var cond = this.conds[i][si];
 			var cls = Passive.Cond[cond.type];

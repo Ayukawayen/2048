@@ -97,7 +97,7 @@ Battle.prototype.postLogs = function() {
 	}
 	
 	//var url = 'http://localhost/2048RPG/backend/2048/index.php';
-	var url = 'http://2048-ayukawayen.rhcloud.com/';
+	var url = 'https://2048-ayukawayen.rhcloud.com/';
 	
 	var xhr = new XMLHttpRequest();
 	xhr.onreadystatechange=this.onLogPosted;
