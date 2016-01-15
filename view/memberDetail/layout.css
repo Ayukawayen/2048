@@ -1,0 +1,287 @@
+.view_memberDetail {
+	line-height:1.25;
+}
+
+.view_memberDetail >.relative >* { display:none; }
+.view_memberDetail >.relative.mode_main >.modeMain { display:block; }
+.view_memberDetail >.relative.mode_sk   >.modeSk   { display:block; }
+
+.view_memberDetail .back        {top:0.5rem; height:3.5rem; left:0rem; width: 4rem; }
+.view_memberDetail .memberName  {top:0.5rem; height:3.5rem; left:4rem; width:14rem; }
+.view_memberDetail .modeIcon    {top:0.5rem; height:3.5rem; right:0.5rem; width:3.5rem;}
+
+.view_memberDetail .image       {top:0; bottom:5.5rem; left:0; right:0; }
+.view_memberDetail .passive     {bottom:0; height:5.5rem; left:0; right:0; }
+.view_memberDetail .attrList    {bottom:6.0rem; height:11.5rem; left:0.5rem; width:8.5rem; }
+
+.view_memberDetail .skSelection {top: 4.5rem; height:12.5rem; right:6.25rem; width:12.5rem; }
+.view_memberDetail .skDesc      {top:17.5rem; bottom: 0.5rem; right:0.5rem; left:0.5rem; }
+
+.view_memberDetail .back {
+	font-size:2.5rem;
+	padding:0.25rem 0 0;
+	border-width:0 0.25rem 0 0;
+	border-style:solid;
+	
+	text-align:center;
+}
+.view_memberDetail .memberName {
+	font-size:1.5rem;
+	padding:0.75rem 0.5rem 0 1rem;
+	border-radius:0 0.5rem 0.5rem 0;
+}
+
+.view_memberDetail .modeIcon {
+	border-width:0.125rem;
+	border-style:solid;
+	
+	border-radius:0.5rem;
+}
+
+
+.view_memberDetail .skSelection {
+	padding:0 0.5rem;
+	
+	border-radius:1rem;
+}
+
+.view_memberDetail .image >img {
+	position:absolute;
+	
+	display:block;
+	
+	left:1.5rem;
+	right:1.5rem;
+	bottom:1.5rem;
+	height:22rem;
+}
+.view_memberDetail .mainIcon >img {
+	display:block;
+	
+	width:90%;
+	height:90%;
+	margin:5% auto 0;
+}
+
+
+.view_memberDetail .passive {
+	padding:0.25rem;
+}
+.view_memberDetail .passive >.name {
+	padding:0.25rem 0.5rem 0;
+}
+.view_memberDetail .passive .desc {
+	word-break:break-all;
+	word-wrap:break-word;
+
+	height:3rem;
+	margin:0.25rem;
+	padding:0.25rem 0.5rem;
+	border-radius:0.25rem;
+}
+
+.view_memberDetail .skIcon {
+	padding:0.125rem 0 0;
+}
+
+.view_memberDetail .skIcon .cell {
+	color:transparent;
+}
+
+.view_memberDetail .attrList >li {
+	height:2.25rem;
+	width:8rem;
+	
+	margin:0.5rem 0 0;
+	padding:0.25rem 0.5rem;
+	border-width:0.25rem;
+	border-style:solid;
+	
+	border-radius:0.5rem;
+}
+
+.view_memberDetail .attrList >li >.name {
+	float:left;
+}
+.view_memberDetail .attrList >li >.value {
+	float:right;
+	
+	text-align:right;
+}
+
+
+
+
+
+.view_memberDetail .cell {
+	width:100%;
+	height:100%;
+	border-radius:50%;
+	
+	font-size:0.75rem;
+	
+	padding:0.6rem 0.125rem 0;
+	
+	text-align:center;
+	
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select: none;
+	user-select:none;
+}
+
+.view_memberDetail .cellWrapper {
+	border-radius:50%;
+	transform:translate(-50%,-50%);
+}
+
+.view_memberDetail .skIcon .cellWrapper {
+	width:1rem;
+	height:1rem;
+	border-width:1px;
+	border-style:solid;
+}
+
+.view_memberDetail .skIcon .cellWrapper.ele_22 {top: 0.5rem; left:1.625rem;}
+.view_memberDetail .skIcon .cellWrapper.ele_11 {top: 2.0rem; left:2.5rem;}
+.view_memberDetail .skIcon .cellWrapper.ele_00 {top: 2.0rem; left:0.75rem;}
+.view_memberDetail .skIcon .cellWrapper.ele_12 {top: 1.0rem; left:2.5rem;}
+.view_memberDetail .skIcon .cellWrapper.ele_01 {top: 2.5rem; left:1.625rem;}
+.view_memberDetail .skIcon .cellWrapper.ele_20 {top: 1.0rem; left:0.75rem;}
+
+
+.view_memberDetail .skSelection .cellWrapper        { width:3.5rem; height:3.5rem; padding:0.25rem;}
+.view_memberDetail .skSelection .cellWrapper.corner { width:4.0rem; height:4.0rem; padding:0.50rem;}
+
+.view_memberDetail .skSelection .cellWrapper.ele_22 {top: 2.25rem; left:5.75rem;}
+.view_memberDetail .skSelection .cellWrapper.ele_11 {top: 8.25rem; left:9.25rem;}
+.view_memberDetail .skSelection .cellWrapper.ele_00 {top: 8.25rem; left:2.25rem;}
+.view_memberDetail .skSelection .cellWrapper.ele_12 {top: 4.25rem; left:9.25rem;}
+.view_memberDetail .skSelection .cellWrapper.ele_01 {top:10.25rem; left:5.75rem;}
+.view_memberDetail .skSelection .cellWrapper.ele_20 {top: 4.25rem; left:2.25rem;}
+
+
+.view_memberDetail .skSelection .ring {
+	border-radius:50%;
+	transform:translate(-50%,-50%);
+	
+	top: 50%;
+	left:50%;
+	width:8rem;
+	height:8rem;
+	border-width:0.5rem;
+	border-style:solid;
+}
+
+
+.view_memberDetail .skDesc {
+	word-break:break-all;
+	word-wrap:break-word;
+	
+	padding:0.5rem;
+	border-width:0.125rem;
+	border-style:solid;
+	
+	border-radius:0.5rem;
+	
+	font-size:1rem;
+	
+	overflow-y:auto;
+}
+
+.view_memberDetail .skDesc >.name {
+	display:inline-block;
+	float:left;
+}
+.view_memberDetail .skDesc .rank {
+	display:inline-block;
+	float:right;
+	
+	width:5rem;
+}
+
+.view_memberDetail .skDesc .rank::before {
+	content:"Rank";
+	margin:0 0.25rem 0 0;
+	
+	font-weight:bold;
+}
+.view_memberDetail .skDesc .rank.isEx::after {
+	content:"+1";
+	
+	font-size:0.8rem;
+}
+
+.view_memberDetail .skDesc .desc {
+	clear:both;
+	
+	padding:0.25rem 0 0;
+	
+	white-space: pre-wrap;
+}
+
+.view_memberDetail .skDesc .desc .content {
+}
+.view_memberDetail .skDesc .desc .content >p {
+	margin:0 0 0.25rem 1rem;
+	
+	line-height:1.25rem;
+	vertical-align:middle;
+}
+.view_memberDetail .skDesc .desc .content dfn {
+	margin:0 0.25rem;
+}
+
+.view_memberDetail .statu {
+	display:inline-block;
+	
+	font-size:0.8rem;
+	height:1.25rem;
+	
+	margin:0 0.25rem;
+	
+	vertical-align:bottom;
+}
+.view_memberDetail .statu >span {
+	display:inline-block;
+	
+	height:1.25rem;
+	padding:0.2rem 0.2rem 0;
+	
+	border-width:1px 0;
+	border-style:solid;
+	
+	line-height:0.8rem;
+}
+.view_memberDetail .statu >span.intensity {
+	padding:0.2rem 0.2rem 0 0;
+}
+.view_memberDetail .statu >span:first-of-type {
+	border-width:1px 0 1px 1px;
+	border-radius:0.2rem 0 0 0.2rem;
+}
+.view_memberDetail .statu >span:last-of-type {
+	border-width:1px 1px 1px 0;
+	border-radius:0 0.2rem 0.2rem 0;
+}
+
+
+
+.view_memberDetail .skDesc .desc .more {
+	margin:0.5rem 0 0;
+	
+	border-width:0.25rem 0 0 0;
+	border-style:dashed;
+}
+
+.view_memberDetail .skDesc .desc .more dt {
+	margin:0.5rem 0 0;
+	
+	text-decoration:underline;
+	
+	font-weight:bold;
+}
+
+.view_memberDetail .skDesc .desc .more dd {
+	margin:0 0 0 1em;
+}

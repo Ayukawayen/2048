@@ -1,0 +1,43 @@
+.view_battle .board .row .cell {
+	background-color:#bbb;
+	color:#000;
+}
+
+/*
+.view_battle .board .row .cell[v="2"]    {background-color:#f0f0f0;}
+.view_battle .board .row .cell[v="4"]    {background-color:#e0e0e0;}
+.view_battle .board .row .cell[v="8"]    {background-color:#d0d0d0;}
+.view_battle .board .row .cell[v="16"]   {background-color:#60bb60;}
+.view_battle .board .row .cell[v="32"]   {background-color:#50cc50;}
+.view_battle .board .row .cell[v="64"]   {background-color:#40dd40;}
+.view_battle .board .row .cell[v="128"]  {background-color:#dd9090;}
+.view_battle .board .row .cell[v="256"]  {background-color:#ee9898;}
+.view_battle .board .row .cell[v="512"]  {background-color:#ffa0a0;}
+.view_battle .board .row .cell[v="1024"] {background-color:#eeee40;}
+.view_battle .board .row .cell[v="2048"] {background-color:#ffff00;}
+*/
+/*
+.view_battle .board .row .cell[v="2"]    {background-color:#cdd;}
+.view_battle .board .row .cell[v="4"]    {background-color:#dee;}
+.view_battle .board .row .cell[v="8"]    {background-color:#eff;}
+.view_battle .board .row .cell[v="16"]   {background-color:#4d4;}
+.view_battle .board .row .cell[v="32"]   {background-color:#5e5;}
+.view_battle .board .row .cell[v="64"]   {background-color:#6f6;}
+.view_battle .board .row .cell[v="128"]  {background-color:#d77;}
+.view_battle .board .row .cell[v="256"]  {background-color:#e88;}
+.view_battle .board .row .cell[v="512"]  {background-color:#f99;}
+.view_battle .board .row .cell[v="1024"] {background-color:#ee3;}
+.view_battle .board .row .cell[v="2048"] {background-color:#ff0;}
+*/
+.view_battle .board .row .cell.v_2    {background-color:#fff;}
+.view_battle .board .row .cell.v_4    {background-color:#eee;}
+.view_battle .board .row .cell.v_8    {background-color:#fcd;}
+.view_battle .board .row .cell.v_16   {background-color:#fab;}
+.view_battle .board .row .cell.v_32   {background-color:#fa9;}
+.view_battle .board .row .cell.v_64   {background-color:#f87;}
+.view_battle .board .row .cell.v_128  {background-color:#bec;}
+.view_battle .board .row .cell.v_256  {background-color:#9ea;}
+.view_battle .board .row .cell.v_512  {background-color:#8f8;}
+.view_battle .board .row .cell.v_1024 {background-color:#6f6;}
+.view_battle .board .row .cell.v_2048 {background-color:#ff0;}
+

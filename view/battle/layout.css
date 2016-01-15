@@ -1,0 +1,252 @@
+.view_battle .board {right:0; left:0; bottom:0; height:25rem;}
+.view_battle .party {right:0; left:0; bottom:25rem; height:5.25rem;}
+.view_battle .field {right:0; left:0; bottom:30.25rem; top:0;}
+
+.view_battle .back  {left:0; width:3.5rem; top:1.25rem; height:3.5rem;}
+
+.view_battle .field .allyList  {left:0; right:0; bottom:0; height:3.25rem;}
+.view_battle .field .enemyList {left:0; right:0; bottom:35%; height:4.5rem;}
+.view_battle .field .stat      {left:0; right:0; top:0; height:1.25rem;}
+
+.view_battle .field .sk        {left:5.75rem; right:5.75rem; bottom:-1.5rem; height:0rem;}
+
+.view_battle .field .hit       {left:0; width:5.75rem; bottom:2.0rem; height:1.75rem;}
+.view_battle .field .combo     {left:0; width:6.5rem; bottom:0.25rem; height:1.75rem;}
+
+.view_battle .field .enemyList .enemy {width:3rem; height:4rem; margin:0 0.25rem;}
+.view_battle .field .enemyList .enemy .img {width:3rem; height:3rem;}
+.view_battle .field .enemyList .enemy .hp  {height:0.5rem; margin:0.125rem 0 0;}
+.view_battle .field .enemyList .enemy .cd  {height:0rem; margin:0.125rem 0 0;}
+
+.view_battle .field .allyList .ally {width:3rem; height:3rem; margin:0 0.25rem;}
+.view_battle .field .allyList .ally .img {width:3rem; height:3rem;}
+
+
+.view_battle .back >span {
+	display:block;
+	width:3rem;
+	height:1.75rem;
+	
+	border-width:0.125rem;
+	border-style:solid;
+	margin:0.5rem 0 0 0.25rem;
+	
+	border-radius:0.25rem;
+	
+	text-align:center;
+}
+
+
+.view_battle .field .stat {
+	padding:0.25rem 0 0;
+	
+	font-size:0.8rem;
+}
+.view_battle .field .stat .floor {top:0; height:1rem; left:11rem; right:11rem;}
+.view_battle .field .stat .score {top:0; height:1rem; right:0.5rem; width:4rem;}
+.view_battle .field .stat .floor {
+	text-align:center;
+}
+.view_battle .field .stat .score {
+	text-align:right;
+}
+
+
+@keyframes battle_field_o_hit { from {font-size:1.5rem;} to {font-size:1.25rem;} }
+@keyframes battle_field_e_hit { from {font-size:1.5rem;} to {font-size:1.25rem;} }
+
+.view_battle .field .hit .value {
+	animation-duration: 1s;
+}
+.view_battle .field.odd  .hit .value { animation-name: battle_field_o_hit; }
+.view_battle .field.even .hit .value { animation-name: battle_field_e_hit; }
+
+@keyframes battle_field_o_combo { 0% {opacity:0;} 25% {opacity:1;} 100% {opacity:0} }
+@keyframes battle_field_e_combo { 0% {opacity:0;} 25% {opacity:1;} 100% {opacity:0} }
+
+.view_battle .field .combo {
+	animation-duration: 1.5s;
+}
+.view_battle .field.odd  .combo { animation-name: battle_field_o_combo; }
+.view_battle .field.even .combo { animation-name: battle_field_e_combo; }
+
+
+.view_battle .field .hit {
+	font-size:1.25rem;
+}
+.view_battle .field .hit.v_0 {
+	visibility:hidden;
+}
+.view_battle .field .hit .value {
+	display:inline-block;
+	
+	width:2rem;
+	
+	vertical-align:middle;
+	text-align:right;
+}
+.view_battle .field .hit .text {
+	display:inline-block;
+	
+	padding:0.25rem 0 0.25rem 0.25rem;
+	
+	vertical-align:middle;
+}
+
+.view_battle .field .combo {
+	font-size:1.25rem;
+	
+	opacity:0;
+}
+.view_battle .field .combo.v_undefined {
+	visibility:hidden;
+}
+
+.view_battle .field .combo .value {
+	display:inline-block;
+	
+	width:2rem;
+	
+	text-align:right;
+}
+.view_battle .field .combo .text {
+	display:inline-block;
+	
+	padding:0 0 0 0.25rem;
+	
+	transform:scale(0.8, 1);
+	transform-origin:0.25rem 0;
+}
+
+.view_battle .field .sk {
+	opacity:1;
+}
+
+@keyframes battle_field_o_sk { 0% {height:1.5rem;} 50% {height:5.5rem;} 100% {height:1.5rem;} }
+@keyframes battle_field_e_sk { 0% {height:1.5rem;} 50% {height:5.5rem;} 100% {height:1.5rem;} }
+.view_battle .field .sk {
+	animation-duration:1s;
+}
+.view_battle .field .sk[n="odd"]  { animation-name: battle_field_o_sk; }
+.view_battle .field .sk[n="even"] { animation-name: battle_field_e_sk; }
+
+.view_battle .field .sk {
+	padding:0.5rem 0.5rem;
+	
+	border-width:0.25rem;
+	border-style:solid;
+	border-radius:0.5rem;
+}
+
+.view_battle .field .sk >* {
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.view_battle .field .sk .member {
+	height:2rem;
+	margin:0 0.5rem 0 0;
+}
+.view_battle .field .sk .element {
+	font-size:1rem;
+}
+
+.view_battle .field .enemyList {
+	text-align:center;
+}
+.view_battle .field .enemyList .enemy {
+	display:inline-block;
+}
+.view_battle .field .enemyList .enemy.empty {
+	display:none;
+}
+.view_battle .field .enemyList .enemy .img {
+	display:block;
+}
+.view_battle .field .enemyList .enemy .bar {
+	border-width:1px;
+}
+
+
+.view_battle .field .allyList {
+	text-align:center;
+}
+.view_battle .field .allyList .ally {
+	display:inline-block;
+}
+.view_battle .field .allyList .ally .img {
+	display:block;
+	
+	border-width:0.125rem;
+	border-style:solid;
+	border-radius:0.5rem;
+	
+}
+
+.view_battle .field .mask {
+	display:none;
+	position:absolute;
+	
+	font-size:4rem;
+	
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	
+	padding:10% 0 0;
+	
+	transform:scaleX(1.25);
+	
+	text-align:center;
+}
+.view_battle .field .mask.show {
+	display:block;
+}
+
+.view_battle .field.clear .mask::after {
+	content:"Clear!";
+}
+.view_battle .field.lose .mask::after {
+	content:"LOSE";
+}
+
+
+.view_battle .party .partyStatuList  {left:0; right:0; top:0; height:3.75rem;}
+.view_battle .party .partyHp         {left:0; right:0; top:4rem; height:1.25rem;}
+
+.view_battle .party .partyStatuList >li {
+	display:inline-block;
+	
+	height:1.75rem;
+	margin:0.25rem 0 0 0.25rem;
+}
+.view_battle .party .partyStatuList >li >span {
+	display:inline-block;
+	
+	height:1.5rem;
+	padding:0.25rem 0.25rem 0;
+	
+	border-width:1px 0;
+	border-style:solid;
+	
+	line-height:1rem;
+}
+.view_battle .party .partyStatuList >li >span.intensity {
+	padding:0.25rem 0.25rem 0 0;
+}
+.view_battle .party .partyStatuList >li >span:first-of-type {
+	border-width:1px 0 1px 1px;
+	border-radius:0.25rem 0 0 0.25rem;
+}
+.view_battle .party .partyStatuList >li >span:last-of-type {
+	border-width:1px 1px 1px 0;
+	border-radius:0 0.25rem 0.25rem 0;
+}
+
+.view_battle .party .partyHp {
+	height:1.25rem;
+	width:100%;
+	
+	padding:0 0.5rem;
+}

@@ -1,0 +1,140 @@
+.view_battle .board {
+}
+
+.view_battle .board.noMoreMove::after {
+	content:"No More Move";
+	
+	display:block;
+	position:absolute;
+	
+	font-size:3rem;
+	
+	width:100%;
+	height:100%;
+	
+	padding:45% 0 0;
+	margin:-100% 0 0;
+	
+	text-align:center;
+}
+
+.view_battle .board.noMoreMove::after {
+	background-color:rgba(102,102,102,0.00); color:rgba(255,255,255,0.00); text-shadow:0 0 0.25rem rgba(255,0,0,0.00);
+}
+
+@keyframes board_noMoreMove {
+	0%   {background-color:rgba(102,102,102,0.00); }
+	20%  {                                         color:rgba(255,255,255,0.00); text-shadow:0 0 0.25rem rgba(255,0,0,0.00);}
+	100% {background-color:rgba(102,102,102,0.75); color:rgba(255,255,255,1.00); text-shadow:0 0 0.25rem rgba(255,0,0,1.00);}
+}
+.view_battle .board.noMoreMove::after {
+	animation-name: board_noMoreMove;
+	animation-duration: 3s;
+	
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+
+.view_battle .board .row {
+	width:100%;
+	height:22.5%;
+	
+	margin:2% 0 0 0;
+}
+
+.view_battle .board .row .cell {
+	float:left;
+	
+	width:22.5%;
+	height:100%;
+	
+	margin:0 0 0 2%;
+	
+	border-radius:0.5rem;
+}
+
+.view_battle .board .row .cell {
+	text-align:center;
+	
+	line-height:1;
+	
+	font-weight:bold;
+}
+
+
+.view_battle .board .row .cell {
+    animation-duration: 0.25s;
+}
+.view_battle .board .row .cell.dir_n {
+    animation-duration: 0.5s;
+}
+
+@keyframes cellKf_o_l { 0% {transform:translate(0,0);} 40% {transform:translate(-0.25rem,0);} 60% {transform:translate(-0.25rem,0);} 100% {transform:translate(0,0);}}
+@keyframes cellKf_o_r { 0% {transform:translate(0,0);} 40% {transform:translate( 0.25rem,0);} 60% {transform:translate( 0.25rem,0);} 100% {transform:translate(0,0);}}
+@keyframes cellKf_o_u { 0% {transform:translate(0,0);} 40% {transform:translate(0,-0.25rem);} 60% {transform:translate(0,-0.25rem);} 100% {transform:translate(0,0);}}
+@keyframes cellKf_o_d { 0% {transform:translate(0,0);} 40% {transform:translate(0, 0.25rem);} 60% {transform:translate(0, 0.25rem);} 100% {transform:translate(0,0);}}
+@keyframes cellKf_o_n { from {opacity:0.5} to {opacity:1.0;} }
+
+@keyframes cellKf_e_l { 0% {transform:translate(0,0);} 40% {transform:translate(-0.25rem,0);} 60% {transform:translate(-0.25rem,0);} 100% {transform:translate(0,0);}}
+@keyframes cellKf_e_r { 0% {transform:translate(0,0);} 40% {transform:translate( 0.25rem,0);} 60% {transform:translate( 0.25rem,0);} 100% {transform:translate(0,0);}}
+@keyframes cellKf_e_u { 0% {transform:translate(0,0);} 40% {transform:translate(0,-0.25rem);} 60% {transform:translate(0,-0.25rem);} 100% {transform:translate(0,0);}}
+@keyframes cellKf_e_d { 0% {transform:translate(0,0);} 40% {transform:translate(0, 0.25rem);} 60% {transform:translate(0, 0.25rem);} 100% {transform:translate(0,0);}}
+@keyframes cellKf_e_n { from {opacity:0.5} to {opacity:1.0;} }
+
+.view_battle .board .row .cell.dir_l.move_odd  {animation-name: cellKf_o_l;}
+.view_battle .board .row .cell.dir_r.move_odd  {animation-name: cellKf_o_r;}
+.view_battle .board .row .cell.dir_u.move_odd  {animation-name: cellKf_o_u;}
+.view_battle .board .row .cell.dir_d.move_odd  {animation-name: cellKf_o_d;}
+/*.view_battle .board .row .cell.dir_n.move_odd  {animation-name: cellKf_o_n;}*/
+
+.view_battle .board .row .cell.dir_l.move_even {animation-name: cellKf_e_l;}
+.view_battle .board .row .cell.dir_r.move_even {animation-name: cellKf_e_r;}
+.view_battle .board .row .cell.dir_u.move_even {animation-name: cellKf_e_u;}
+.view_battle .board .row .cell.dir_d.move_even {animation-name: cellKf_e_d;}
+/*.view_battle .board .row .cell.dir_n.move_even {animation-name: cellKf_e_n;}*/
+
+.view_battle .board .row .cell.v_1.move_odd  {animation-name: none;}
+.view_battle .board .row .cell.v_1.move_even {animation-name: none;}
+
+
+.view_battle .board .row .cell .element {
+	display:block;
+	
+	font-size:1.5rem;
+	margin:0.25rem 0 0 0.25rem;
+	overflow:hidden;
+}
+
+.view_battle .board .row .cell span {
+	display:inline-block;
+}
+
+.view_battle .board .row .cell span {
+	font-size:1.75rem;
+	padding:0.8rem 0 0 0;
+}
+.view_battle .board .row .cell.v_2  span,
+.view_battle .board .row .cell.v_4  span,
+.view_battle .board .row .cell.v_8  span,
+.view_battle .board .row .cell.v_16 span,
+.view_battle .board .row .cell.v_32 span,
+.view_battle .board .row .cell.v_64 span {
+	font-size:3.00rem;
+	padding:0.2rem 0 0 0;
+}
+.view_battle .board .row .cell.v_128 span,
+.view_battle .board .row .cell.v_256 span,
+.view_battle .board .row .cell.v_512 span {
+	font-size:2.50rem;
+	padding:0.4rem 0 0 0;
+}
+.view_battle .board .row .cell.v_1024 span,
+.view_battle .board .row .cell.v_2048 span,
+.view_battle .board .row .cell.v_4096 span,
+.view_battle .board .row .cell.v_8192 span {
+	font-size:2.00rem;
+	padding:0.6rem 0 0 0;
+}
+
+.view_battle .board .row .cell.v_1 .element {visibility:hidden;}

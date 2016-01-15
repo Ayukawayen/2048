@@ -1,0 +1,9 @@
+.supList >li {
+	background-color:#ccc;
+	border-color:#333;
+}
+
+.supList >li .img  {
+	filter: drop-shadow(0 0 0.0625rem #666);
+	-webkif-filter: drop-shadow(0 0 0.0625rem #666);
+}

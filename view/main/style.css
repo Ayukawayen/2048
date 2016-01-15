@@ -1,0 +1,24 @@
+body { background-color:#999; }
+@media all and (min-aspect-ratio: 280/400) {
+body { background-color:#fff; }
+}
+
+
+#main >.menu {
+	background-color:#9c9;
+	color:#333;
+}
+
+#menu >ul {
+}
+
+#main >.menu >li {
+	background-color:#9f9;
+	color:#333;
+	
+}
+
+#main >.content {
+	background-color:#999;
+	color:#333;
+}

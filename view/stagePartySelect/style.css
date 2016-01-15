@@ -1,0 +1,14 @@
+.view_stagePartySelect .supList {
+	background-color:#ccc;
+}
+
+.view_stagePartySelect .supList::before {
+	background-color:#333;
+	color:#ccc;
+}
+
+.view_stagePartySelect .submit {
+	background-color:#ff3;
+	color:#333;
+	border-color:#fff;
+}

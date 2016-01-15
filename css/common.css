@@ -1,0 +1,71 @@
+* {
+	margin:0;
+	padding:0;
+
+	box-sizing:border-box;
+	
+	overflow:hidden;
+	
+	cursor:pointer;
+	
+	list-style:none;
+	
+	word-break:break-all;
+	
+	font-style:normal;
+}
+
+
+
+.relative {
+	position:relative;
+	width:100%;
+	height:100%;
+}
+.relative >* {
+	position:absolute;
+}
+
+.displayNone {
+	display:none;
+}
+
+/** element **/
+.element {
+	display:inline-block;
+	
+	width:1em;
+	height:1em;
+	
+	background-size:5em 1em;
+	
+	background-image:url('../image/symbols.png');
+}
+.element.ele_0, .element[ele="0"] { background-position:-1em 0; }
+.element.ele_1, .element[ele="1"] { background-position:-2em 0; }
+.element.ele_2, .element[ele="2"] { background-position:-3em 0; }
+.element.ele_-1, .element[ele="-1"] { background-position:-4em 0; }
+
+/** element **/
+
+/** bar **/
+.bar {
+	height:1.25em;
+	margin:0 auto;
+	
+	border-width:0.125em;
+	border-style:solid;
+	border-radius:0.5em;
+}
+.bar .barValue {
+	height:100%;
+	border-radius:0.375em;
+}
+.bar .barText {
+	height:1em;
+	
+	margin:-1.125em auto 0;
+	
+	text-align:center;
+}
+/** bar **/

@@ -1,0 +1,43 @@
+html, body {
+	font-family: Helvetica, Arila, sans-serif;
+}
+
+html, body { font-size:4vw; }
+@media all and (min-aspect-ratio: 255/400) {
+html, body { font-size:2.55vh; }
+}
+
+body {
+	width:25rem;
+	height:100vh;
+	max-height:200vw;
+	
+	margin:0 auto;
+}
+
+#main >.menu    {right:0; left:0; bottom:0rem; height:4rem;}
+#main >.content {right:0; left:0; bottom:4rem; top:0;}
+
+#main[fullscreen=true] >.menu    {height:0;}
+#main[fullscreen=true] >.content {bottom:0;}
+
+#main >.menu {
+	padding:0 0.125rem 0 0;
+	
+	text-align:center;
+}
+
+#main >.menu >li {
+	display:inline-block;
+	
+	font-size:1.5rem;
+	line-height:1.0;
+	
+	width:4rem;
+	height:3.75rem;
+	
+	padding:1.25rem 0 0;
+	margin:0.125rem 0 0 0.125rem;
+	
+	text-align:center;
+}

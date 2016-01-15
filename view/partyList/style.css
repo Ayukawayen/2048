@@ -1,0 +1,24 @@
+.partyList .partyTabList >li {
+	background-color:#333;
+	color:#fff;
+	border-color:#ccc;
+}
+
+.partyList .partyTabList >li.selected.true {
+	background-color:#663;
+	color:#ff0;
+}
+.partyList .partyTabList >li.opened_false {
+	background-color:#666;
+	color:#ccc;
+}
+
+.partyList .partySummary {
+	background-color:#993;
+	color:#333;
+}
+
+.partyList .partySummary .attrList >li {
+	background-color:#660;
+	color:#fff;
+}

@@ -1,0 +1,32 @@
+.view_stagePartySelect .partyList {top:0;          height:10.25rem; left:0; right:0}
+.view_stagePartySelect .supList   {bottom:4.25rem; top:10.50rem;    left:0.5rem; right:0.5rem}
+.view_stagePartySelect .submit    {bottom:0.50rem; height:3.50rem;  left:0; right:0}
+
+.view_stagePartySelect .partyList {
+}
+
+.view_stagePartySelect .supList {
+}
+
+.view_stagePartySelect .supList::before {
+	content:"選擇戰友";
+	
+	display:block;
+	
+	font-size:1.25rem;
+	
+	padding:0.25rem 0.5rem;
+}
+
+.view_stagePartySelect .submit {
+	font-size:2rem;
+	
+	padding:0.25rem 0 0;
+	margin:0 0.5rem 0;
+	border-width:0.5rem;
+	border-style:solid;
+	
+	border-radius:1rem;
+	
+	text-align:center;
+}

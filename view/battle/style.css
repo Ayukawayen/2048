@@ -1,0 +1,121 @@
+.view_battle .field {
+	background-color:#3c3;
+}
+.view_battle .party {
+	background-color:#666;
+	color:#ccc;
+}
+.view_battle .board {
+	background-color:#666;
+}
+.view_battle .back {
+}
+
+.view_battle .bar {
+	border-color:#fff;
+	background-color:#333;
+}
+.view_battle .bar .barText {
+	color:#cff;
+}
+.view_battle .bar.hp .barValue {
+	background-color:#f66;
+}
+
+.view_battle .back >span {
+	background-color:#f00;
+	border-color:#ccc;
+	color:#fff;
+}
+
+.view_battle .field .stat {
+	background-color:#333;
+	color:#ccc;
+}
+.view_battle .field .hit {
+	color:#ff0;
+	text-shadow:0 0 0.25rem #333;
+}
+.view_battle .field .combo {
+	color:#0ff;
+	text-shadow:0 0 0.25rem #333;
+}
+
+.view_battle .field .sk {
+	background-color:#fff;
+	border-color:#333;
+	color:#333;
+}
+.view_battle .field .sk .member {
+	-webkit-filter:drop-shadow(0 0 0.125rem #333);
+	filter:drop-shadow(0 0 0.125rem #333);
+}
+
+.view_battle .field.clear .mask {
+	background-color:rgba(255,255,255,0.5);
+	color:#ff0;
+	text-shadow:0 0 0.5rem #000;
+}
+.view_battle .field.lose .mask {
+	background-color:rgba(51,51,51,0.5);
+	color:#f00;
+	text-shadow:0 0 0.5rem #ccc;
+}
+
+
+.view_battle .field .ally .img {
+	background-color:#ccc;
+	border-color:#999;
+}
+
+.view_battle .field .enemy .img { -webkit-filter:saturate(0%); filter:saturate(0%); }
+
+.view_battle .field .enemy.cnt_1 .img { -webkit-filter:saturate(0%) brightness(0%);   filter:saturate(0%) brightness(0%);   }
+.view_battle .field .enemy.cnt_2 .img { -webkit-filter:saturate(0%) brightness(50%);  filter:saturate(0%) brightness(50%);  }
+.view_battle .field .enemy.cnt_3 .img { -webkit-filter:saturate(0%) brightness(100%); filter:saturate(0%) brightness(100%); }
+.view_battle .field .enemy.cnt_4 .img { -webkit-filter:saturate(0%) brightness(150%); filter:saturate(0%) brightness(150%); }
+.view_battle .field .enemy.cnt_5 .img { -webkit-filter:saturate(0%) brightness(200%); filter:saturate(0%) brightness(200%); }
+
+.view_battle .field .enemy.cnt_1 .img { padding: 0% 0% 0;}
+.view_battle .field .enemy.cnt_2 .img { padding: 4% 2% 0;}
+.view_battle .field .enemy.cnt_3 .img { padding: 8% 4% 0;}
+.view_battle .field .enemy.cnt_4 .img { padding:12% 6% 0;}
+.view_battle .field .enemy.cnt_5 .img { padding:16% 8% 0;}
+/*
+.view_battle .field .enemy.cnt_1 .img { filter:brightness(500%) drop-shadow(0 0 1px #000); }
+.view_battle .field .enemy.cnt_2 .img { filter:brightness(0%); }
+.view_battle .field .enemy.cnt_3 .img { filter:saturate(0%) brightness(200%); }
+.view_battle .field .enemy.cnt_4 .img { filter:saturate(0%); }
+.view_battle .field .enemy.cnt_5 .img { filter:hue-rotate(180deg) saturate(50%) brightness(200%); }
+*/
+
+.view_battle .field .enemy.alive_false .img {
+	opacity:0.25;
+	
+	filter:none;
+	-webkit-filter:none;
+}
+
+.view_battle .fieldContainer .score {
+	color:#fff;
+	text-shadow:0 0 0.25rem #000;
+}
+
+
+.view_battle .party .partyStatuList >li {
+}
+.view_battle .party .partyStatuList >li >span {
+	background-color:#999;
+	border-color:#ccc;
+	color:#333;
+}
+.view_battle .party .partyStatuList >li.type_buff >span {
+	background-color:#3c6;
+}
+.view_battle .party .partyStatuList >li.type_debuff >span {
+	background-color:#c36;
+}
+.view_battle .party .partyStatuList >li >span.duration {
+	background-color:#339;
+	color:#ccc;
+}

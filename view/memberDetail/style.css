@@ -1,0 +1,135 @@
+.view_memberDetail {
+}
+.view_memberDetail .relative.mode_main {
+	background-color:#666;
+	background: linear-gradient(#333, #666, #777, #666, #333);
+}
+.view_memberDetail .relative.mode_sk {
+	background-color:#666;
+	background: linear-gradient(#333, #666, #777, #666, #333);
+}
+
+.view_memberDetail .image {
+}
+.view_memberDetail .image >img {
+	filter: drop-shadow(0 0 0.25rem #fff);
+	-webkit-filter: drop-shadow(0 0 0.25rem #fff);
+}
+.view_memberDetail .mainIcon >img {
+	filter: drop-shadow(0 0 0.0625rem #fff);
+	-webkit-filter: drop-shadow(0 0 0.0625rem #fff);
+}
+
+
+.view_memberDetail .back, .view_memberDetail .memberName {
+	background-color:#393;
+	color:#fff;
+}
+.view_memberDetail .back {
+	border-color:#0c0;
+}
+.view_memberDetail .memberName {
+	text-shadow:0 0 0.25rem #000;
+}
+
+
+.view_memberDetail .attrList >li {
+	background-color:rgba(51,51,51,0.75);
+	border-color:rgba(255,255,255,0.75);
+}
+.view_memberDetail .attrList >li >.name {
+	color:#ff6;
+}
+.view_memberDetail .attrList >li >.value {
+	color:#fff;
+}
+
+
+.view_memberDetail .passive {
+	background-color:#333;
+	color:#fff;
+}
+.view_memberDetail .passive >.name {
+}
+.view_memberDetail .passive .desc {
+	background-color:#000;
+	color:#ccc;
+}
+
+
+.view_memberDetail .modeIcon {
+	background-color:#666;
+	border-color:#fff;
+}
+
+.view_memberDetail .skIcon .cellWrapper {
+	border-color:#fff;
+}
+
+
+.view_memberDetail .skSelection {
+	background-color:#333;
+	border-color:#444;
+}
+
+.view_memberDetail .skSelection .ring {
+	border-color:#ccc;
+}
+
+.view_memberDetail .cell {
+	background-color:#333;
+	background:radial-gradient(farthest-corner at 50% 60%, #333 20%, #000 100%);
+	color:#fff;
+	text-shadow:0 0 0.25rem #000;
+}
+.view_memberDetail .cellWrapper .cell.ele_2 {background-color:#900; background:radial-gradient(farthest-corner at 50% 40%, #c66 10%, #900 60%);}
+.view_memberDetail .cellWrapper .cell.ele_1 {background-color:#090; background:radial-gradient(farthest-corner at 50% 40%, #6c6 10%, #090 60%);}
+.view_memberDetail .cellWrapper .cell.ele_0 {background-color:#009; background:radial-gradient(farthest-corner at 50% 40%, #66c 10%, #009 60%);}
+
+.view_memberDetail .skSelection .cellWrapper.ele_22 {background-color:#c00; background:radial-gradient(#e33 56%, #333 61%, #f55 66%);}
+.view_memberDetail .skSelection .cellWrapper.ele_11 {background-color:#0c0; background:radial-gradient(#3e3 56%, #333 61%, #5f5 66%);}
+.view_memberDetail .skSelection .cellWrapper.ele_00 {background-color:#00c; background:radial-gradient(#33e 56%, #333 61%, #55f 66%);}
+
+.view_memberDetail .skSelection .cellWrapper.ele_12 {background-color:#cc0; background:linear-gradient(135deg, #f33, #3f3);}
+.view_memberDetail .skSelection .cellWrapper.ele_01 {background-color:#0cc; background:linear-gradient(270deg, #3f3, #33f);}
+.view_memberDetail .skSelection .cellWrapper.ele_20 {background-color:#c0c; background:linear-gradient( 45deg, #33f, #f33);}
+
+.view_memberDetail .skDesc {
+	background-color:#000;
+	color:#ccc;
+	border-color:#ccc;
+}
+
+.view_memberDetail .skDesc >.name {
+	color:#fff;
+}
+.view_memberDetail .skDesc .rank {
+	color:#ccc;
+}
+.view_memberDetail .skDesc .rank::before {
+	color:#cc0;
+}
+.view_memberDetail .skDesc .rank::after {
+	color:#ff3;
+}
+
+.view_memberDetail .statu >span {
+	background-color:#999;
+	border-color:#ccc;
+	color:#333;
+}
+.view_memberDetail .statu.type_buff >span {
+	background-color:#3c6;
+}
+.view_memberDetail .statu.type_debuff >span {
+	background-color:#c36;
+}
+.view_memberDetail .statu >span.duration {
+	background-color:#339;
+	color:#ccc;
+}
+
+.view_memberDetail .skDesc .desc .more {
+	border-color:#999;
+	color:#aaa;
+}
