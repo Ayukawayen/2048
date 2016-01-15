@@ -65,7 +65,10 @@ Enemy.unwrap = function(battle, args) {
 
 Ally = function(battle, memberIds, supId) {
 	var battler = new Battler(battle);
+	battler.getModifiedAtk = Ally.prototype.getModifiedAtk;
+	
 	battler.imgs = [];
+	battler.atks = [];
 	
 	battler.memberIds = memberIds;
 	battler.supId = supId;
@@ -90,6 +93,7 @@ Ally = function(battle, memberIds, supId) {
 		for(var k in member.attrs) {
 			battler[k] += member.attrs[k];
 		}
+		battler.atks.push(member.attrs.atk);
 		
 		battler.passives.push(member.passive);
 		
@@ -104,6 +108,7 @@ Ally = function(battle, memberIds, supId) {
 	
 	return battler;
 };
+
 
 Ally.template = {
 	type:'object',
@@ -138,6 +143,12 @@ Battler.prototype.getModifiedAtk = function() {
 	value *= 1+(this.getModifier('atk%')/100);
 	return value;
 };
+Ally.prototype.getModifiedAtk = function(i) {
+	var value = this.atks[i] + this.getModifier('atk');
+	value *= 1+(this.getModifier('atk%')/100);
+	return value;
+};
+
 Battler.prototype.getModifiedDef = function() {
 	var value = this.def + this.getModifier('def');
 	value *= 1+(this.getModifier('def%')/100);
@@ -243,6 +254,5 @@ Battler.prototype.postXaEffect = function(effect, lv) {
 };
 
 Battler.prototype.postTrEffect = function(effect, lv) {
-console.log(effect);
 	this.battle.board.transElement(effect.from, effect.to);
 };

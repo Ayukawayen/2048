@@ -207,14 +207,16 @@ Battle.prototype.onAllyActionStep = function(battler) {
 
 	battler.onHeal(v * battler.getModifiedHel());
 	
-	var atk = v * battler.getModifiedAtk();
 	var atkCnt = 1 + battler.getModifier('atkCnt');
 	var drainRate = battler.getModifier('drain%')/100;
-	for(var ai=0;ai<atkCnt;++ai) {
-		var targetBattlers = this.getTargetBattlers((battler.getModifier('atkRange') ? 0x120 : 0x110));
-		for(var bi=0;bi<targetBattlers.length;++bi) {
-			var dmg = targetBattlers[bi].onAttack(atk);
-			if(drainRate > 0) battler.onHeal(dmg * drainRate);
+	for(var mi=0;mi<this.ally.atks.length;++mi) {
+		var atk = v * battler.getModifiedAtk(mi);
+		for(var ai=0;ai<atkCnt;++ai) {
+			var targetBattlers = this.getTargetBattlers((battler.getModifier('atkRange') ? 0x120 : 0x110));
+			for(var bi=0;bi<targetBattlers.length;++bi) {
+				var dmg = targetBattlers[bi].onAttack(atk);
+				if(drainRate > 0) battler.onHeal(dmg * drainRate);
+			}
 		}
 	}
 };
@@ -352,9 +354,7 @@ Battle.prototype.nextFloor = function() {
 	this.score += ((64<<this.enemyRk)+64);
 	
 	this.floor++;
-	if(this.floor >= this.getStage().cntFloor) {
-		this.isClear = true;
-	}
+	this.isClear = (this.floor == this.getStage().cntFloor);
 	
 	this.refreshFloor();
 	this.createEnemys();
@@ -386,7 +386,7 @@ Battle.prototype.createEnemys = function() {
 		'img':'e'+this.enemyRk+'.png',
 	};
 	args.atk = Math.round(stgLv*( (409600/512*9/8 + 240*(this.enemyRk*2+10))/c + 1920 ));
-	args.def = Math.round(stgLv*( 1920*(this.enemyRk+1)/2*(10-c)/8 ));
+	args.def = Math.round(stgLv*( 480*(this.enemyRk+1)/2*(10-c)/8 ));
 	args.hel = 0;
 	args.hp = Math.round(stgLv*( (480*16-args.def)*((64<<this.enemyRk)+64)/16/this.enemySize ));
 Util.log(args);
@@ -417,6 +417,10 @@ Battle.prototype.storeData = function() {
 		'enemys':Serializer.wrap(this.enemys, {type:'list', itemTemplate:Enemy.template}),
 		'logs':this.logs,
 	};
+	data = {
+		'v':'20160115',
+		'data':data,
+	};
 	localStorage.setItem('battle', JSON.stringify(data));
 };
 Battle.prototype.clearData = function() {
@@ -429,7 +433,7 @@ Battle.prototype.loadData = function() {
 		return false;
 	}
 	
-	var args = JSON.parse(data);
+	var args = JSON.parse(data).data;
 
 	this.ally = Ally.unwrap(this, Serializer.unwrap(args.ally, Ally.template));
 	delete args.ally;

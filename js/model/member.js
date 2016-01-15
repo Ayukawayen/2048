@@ -78,14 +78,17 @@ Member.initData = [
 	*/
 ];
 
+Member.storeData = function() {
+	var data = JSON.stringify({
+		'v':'20160115',
+		'data':Serializer.serialize(this.items(), {type:'list', itemTemplate:Member.template}),
+	});
+	localStorage.setItem('members', data);
+};
 Member.loadData = function() {
 	var data = localStorage.getItem('members');
-	data = data ? JSON.parse(data) : Member.initData;
+	data = data ? JSON.parse(JSON.parse(data).data) : Member.initData;
 	Member.postItems(data);
-};
-Member.storeData = function() {
-	var data = Serializer.serialize(this.items(), {type:'list', itemTemplate:Member.template});
-	localStorage.setItem('members', data);
 };
 
 Member.loadData();

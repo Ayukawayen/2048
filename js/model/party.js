@@ -50,11 +50,14 @@ Party.initData = [
 
 Party.loadData = function() {
 	var data = localStorage.getItem('partys');
-	data = data ? JSON.parse(data) : Party.initData;
+	data = data ? JSON.parse(JSON.parse(data).data) : Party.initData;
 	Party.postItems(data);
 };
 Party.storeData = function() {
-	var data = Serializer.serialize(this.items(), {type:'list', itemTemplate:Party.template});
+	var data = JSON.stringify({
+		'v':'20160115',
+		'data':Serializer.serialize(this.items(), {type:'list', itemTemplate:Party.template}),
+	});
 	localStorage.setItem('partys', data);
 };
 

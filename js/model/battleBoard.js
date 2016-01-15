@@ -245,7 +245,11 @@ BattleBoard.prototype.addOnMovedListener = function(l) {
 
 
 BattleBoard.prototype.storeData = function() {
-	localStorage.setItem('battleBoard', this.serialize());
+	var data = JSON.stringify({
+		'v':'20160115',
+		'data':this.serialize(),
+	});
+	localStorage.setItem('battleBoard', data);
 };
 BattleBoard.prototype.clearData = function() {
 	localStorage.removeItem('battleBoard');
@@ -257,7 +261,7 @@ BattleBoard.prototype.loadData = function() {
 		return false;
 	}
 	
-	this.deserialize(data);
+	this.deserialize(JSON.parse(data).data);
 	if(this.isGameOver()) {
 		this.reset();
 		return;
