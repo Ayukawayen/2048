@@ -24,6 +24,7 @@ Passive.Cond = {
 	combo: function(args){ for(var k in args) {this[k] = args[k];} },
 	chain: function(args){ for(var k in args) {this[k] = args[k];} },
 	ele: function(args){ for(var k in args) {this[k] = args[k];} },
+	dir: function(args){ for(var k in args) {this[k] = args[k];} },
 };
 
 
@@ -135,6 +136,17 @@ Passive.Cond.ele.prototype.validate = function(battle) {
 	return false;
 };
 
+Passive.Cond.dir.template = {
+	type:'object',
+	itemTemplate:[
+		{name:'value', type:'string'},
+	],
+};
+
+Passive.Cond.dir.prototype.validate = function(battle) {
+	return battle.move.dir === this.value;
+};
+
 
 Passive.postItems([
 	['回復態勢',[[['always',[]]]],[['md',[0,'hel%',[0],[100]]]],'隊伍的回復力上升100%。'],
@@ -180,4 +192,19 @@ Passive.postItems([
 	['藍之力',[[['ele',[['0*','*0']]]]],[['st',['強攻',0,6,[1,0],[0,1]]],['st',['強防',0,6,[1,0],[0,1]]],['st',['強回',0,6,[1,0],[0,1]]]],'消除<span class="element ele_0"></span>的回合，隊伍得到<dfn class="statu"><span class="name">強攻</span><span class="intensity">12</span><span class="duration">6</span></dfn><dfn class="statu"><span class="name">強防</span><span class="intensity">24</span><span class="duration">6</span></dfn><dfn class="statu"><span class="name">強回</span><span class="intensity">24</span><span class="duration">6</span></dfn>。'],
 	['綠之力',[[['ele',[['1*','*1']]]]],[['st',['強攻',0,6,[1,0],[0,1]]],['st',['強防',0,6,[1,0],[0,1]]],['st',['強回',0,6,[1,0],[0,1]]]],'消除<span class="element ele_1"></span>的回合，隊伍得到<dfn class="statu"><span class="name">強攻</span><span class="intensity">12</span><span class="duration">6</span></dfn><dfn class="statu"><span class="name">強防</span><span class="intensity">24</span><span class="duration">6</span></dfn><dfn class="statu"><span class="name">強回</span><span class="intensity">24</span><span class="duration">6</span></dfn>。'],
 	['紅之力',[[['ele',[['2*','*2']]]]],[['st',['強攻',0,6,[1,0],[0,1]]],['st',['強防',0,6,[1,0],[0,1]]],['st',['強回',0,6,[1,0],[0,1]]]],'消除<span class="element ele_2"></span>的回合，隊伍得到<dfn class="statu"><span class="name">強攻</span><span class="intensity">12</span><span class="duration">6</span></dfn><dfn class="statu"><span class="name">強防</span><span class="intensity">24</span><span class="duration">6</span></dfn><dfn class="statu"><span class="name">強回</span><span class="intensity">24</span><span class="duration">6</span></dfn>。'],
+	
+	['回復態勢．上',[[['dir',['u']]]],[['md',[0,'hel%',[0],[360]]]],'移動方向為↑的回合，隊伍的回復倍率上升360%。'],
+	['回復態勢．下',[[['dir',['d']]]],[['md',[0,'hel%',[0],[360]]]],'移動方向為↓的回合，隊伍的回復倍率上升360%。'],
+	['回復態勢．左',[[['dir',['l']]]],[['md',[0,'hel%',[0],[360]]]],'移動方向為←的回合，隊伍的回復倍率上升360%。'],
+	['回復態勢．右',[[['dir',['r']]]],[['md',[0,'hel%',[0],[360]]]],'移動方向為→的回合，隊伍的回復倍率上升360%。'],
+	
+	['防禦態勢．上',[[['dir',['u']]]],[['md',[0,'def%',[0],[360]]]],'移動方向為↑的回合，隊伍的防禦倍率上升360%。'],
+	['防禦態勢．下',[[['dir',['d']]]],[['md',[0,'def%',[0],[360]]]],'移動方向為↓的回合，隊伍的防禦倍率上升360%。'],
+	['防禦態勢．左',[[['dir',['l']]]],[['md',[0,'def%',[0],[360]]]],'移動方向為←的回合，隊伍的防禦倍率上升360%。'],
+	['防禦態勢．右',[[['dir',['r']]]],[['md',[0,'def%',[0],[360]]]],'移動方向為→的回合，隊伍的防禦倍率上升360%。'],
+	
+	['攻擊態勢．上',[[['dir',['u']]]],[['md',[0,'atk%',[0],[180]]]],'移動方向為↑的回合，隊伍的攻擊倍率上升180%。'],
+	['攻擊態勢．下',[[['dir',['d']]]],[['md',[0,'atk%',[0],[180]]]],'移動方向為↓的回合，隊伍的攻擊倍率上升180%。'],
+	['攻擊態勢．左',[[['dir',['l']]]],[['md',[0,'atk%',[0],[180]]]],'移動方向為←的回合，隊伍的攻擊倍率上升180%。'],
+	['攻擊態勢．右',[[['dir',['r']]]],[['md',[0,'atk%',[0],[180]]]],'移動方向為→的回合，隊伍的攻擊倍率上升180%。'],
 ]);

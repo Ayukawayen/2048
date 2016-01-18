@@ -86,13 +86,14 @@ Battle.prototype.onMoved = function(move) {
 	if(!this.ally.isAlive()) {
 		this.isLose = true;
 		this.board.setEnable(false);
+		this.postLogs(true);
 	}
 	
 	this.storeData();
 };
 
-Battle.prototype.postLogs = function() {
-	if(this.logs.length < 5) {
+Battle.prototype.postLogs = function(isForce) {
+	if(!isForce && this.logs.length < 5) {
 		return;
 	}
 	

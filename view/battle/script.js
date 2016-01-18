@@ -38,6 +38,8 @@ var BattleView = React.createClass({
 	onBackClick: function(e) {
 		MainView.setContentView(StageMainView);
 		
+		this.battle.postLogs(true);
+		
 		this.board.clearData();
 		this.battle.clearData();
 	},
