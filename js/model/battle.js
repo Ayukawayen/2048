@@ -65,8 +65,6 @@ Battle.prototype.onMoved = function(move) {
 //Util.log('Passive Step');
 	this.forEachAlly(this.onAllyPassiveStep, []);
 	
-//Util.log('Skill Step');
-	this.forEachAlly(this.onAllySkillStep, []);
 //Util.log('Action Step');
 //Util.log(this.ally.modifiers);
 	this.forEachAlly(this.onAllyActionStep, []);
@@ -75,6 +73,9 @@ Battle.prototype.onMoved = function(move) {
 //Util.log('XAction Step');
 	this.forEachAlly(this.onAllyExtraActionStep, []);
 	this.forEachEnemy(this.onEnemyExtraActionStep, []);
+	
+//Util.log('Skill Step');
+	this.forEachAlly(this.onAllySkillStep, []);
 	
 //Util.log('Clean Step');
 	this.forEachBattler(this.onBattlerCleanStep, []);
