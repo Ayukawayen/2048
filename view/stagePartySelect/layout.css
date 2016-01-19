@@ -1,12 +1,19 @@
-.view_stagePartySelect .partyList {top:0;          height:10.25rem; left:0; right:0}
-.view_stagePartySelect .supList   {bottom:4.25rem; top:10.50rem;    left:0.5rem; right:0.5rem}
-.view_stagePartySelect .submit    {bottom:0.50rem; height:3.50rem;  left:0; right:0}
-
 .view_stagePartySelect .partyList {
+	height:9rem;
 }
 
 .view_stagePartySelect .supList {
+	height:21rem;
+	
+	margin:0.5rem 0.5rem;
+	
+	overflow-y:auto;
 }
+
+.view_stagePartySelect .submit {
+	height:3.50rem;
+}
+
 
 .view_stagePartySelect .supList::before {
 	content:"選擇戰友";

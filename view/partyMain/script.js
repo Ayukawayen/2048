@@ -12,13 +12,11 @@ Util.log(this.props);
 		
 		return (
 			React.createElement('div', this.props, [
-				React.createElement('div', {className:'wrapper'}, [
-					React.createElement(PartyListView, {
-						onItemClick:this.onItemClick,
-						onMemberItemClick:this.onMemberItemClick,
-					}),
-					React.createElement(PartyMainView.MemberListView, {partyId:this.selectedIndex, onItemClick:this.onMemberItemClick}),
-				])
+				React.createElement(PartyListView, {
+					onItemClick:this.onItemClick,
+					onMemberItemClick:this.onMemberItemClick,
+				}),
+				React.createElement(PartyMainView.MemberListView, {partyId:this.selectedIndex, onItemClick:this.onMemberItemClick}),
 			])
 		);
 	},

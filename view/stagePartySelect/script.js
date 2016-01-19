@@ -10,11 +10,9 @@ var StagePartySelectView = React.createClass({
 
 		return (
 			React.createElement('div', this.props, [
-				React.createElement('div', {className:'relative'}, [
-					React.createElement(PartyListView, {onItemClick:this.onPartyItemClick, extraItem:exItem,}),
-					React.createElement(SupListView, {onItemClick:this.onSupItemClick}),
-					React.createElement(BasicComponent, {tagName:'div', props:{className:'submit'}, eventListener:{'click':this.onSubmitClick}, children:['GO!']}),
-				])
+				React.createElement(PartyListView, {onItemClick:this.onPartyItemClick, extraItem:exItem,}),
+				React.createElement(SupListView, {onItemClick:this.onSupItemClick}),
+				React.createElement(BasicComponent, {tagName:'div', props:{className:'submit'}, eventListener:{'click':this.onSubmitClick}, children:['GO!']}),
 			])
 		);
 	},

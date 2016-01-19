@@ -11,15 +11,11 @@ var MemberListView = React.createClass({
 	},
 
 	createItemElement: function(arg) {
-		return React.createElement(MemberListView.MemberItemView, {'ref':'item_'+arg.id, 'item':arg, 'onClick':this.props.onItemClick});
+		return React.createElement(MemberListView.MemberItemView, {'item':arg, 'onClick':this.props.onItemClick});
 	},
 });
 
 MemberListView.MemberItemView = React.createClass({
-	getInitialState: function() {
-		return {};
-	},
-	
 	pressTimeout: 1000,
 
 	render: function() {

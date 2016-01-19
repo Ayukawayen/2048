@@ -12,6 +12,6 @@ Util.log(items);
 	},
 
 	createItemElement: function(arg) {
-		return React.createElement(MemberListView.MemberItemView, {'ref':'item_'+arg.id, 'item':arg.member, 'onClick':this.props.onItemClick});
+		return React.createElement(MemberListView.MemberItemView, {'item':arg.member, 'onClick':this.props.onItemClick});
 	},
 });
