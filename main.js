@@ -3,9 +3,9 @@ ReactDOM.render(
 	document.querySelector('body')
 );
 
-var gUid = localStorage.getItem('uid') || 0;
+var gUid = (localStorage.getItem('uid') & 0xffffffff) || 0;
 if(!gUid) {
-	gUid = Date.now();
+	gUid = Date.now() & 0xffffffff;
 	localStorage.setItem('uid', gUid);
 	MainView.setContentView(BattleView);
 }
