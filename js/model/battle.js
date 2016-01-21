@@ -90,6 +90,12 @@ Battle.prototype.onMoved = function(move) {
 		this.postLogs(true);
 	}
 	
+	if(this.board.isGameOver()) {
+		this.bid = Date.now();
+		this.cntMove = 0;
+		this.chain = 0;
+	}
+	
 	this.storeData();
 };
 
