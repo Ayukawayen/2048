@@ -1,5 +1,6 @@
 .memberList {
 	overflow-y:auto;
+	padding:0.25rem 0;
 }
 
 .memberList >li {
