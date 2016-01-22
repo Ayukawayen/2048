@@ -40,6 +40,8 @@ var MemberDetailView = React.createClass({
 	},
 	
 	componentDidMount: function() {
+		Hint.show('技能切換');
+		
 		var node = this.getDOMNode();
 		
 		node.querySelector('.back').addEventListener('click', this.onBackClick);
