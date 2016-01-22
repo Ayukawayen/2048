@@ -103,16 +103,16 @@
 
 
 .view_battle .party .partyStatuList >li {
-	background-color:#999;
-	color:#333;
 }
 .view_battle .party .partyStatuList >li >span {
+	background-color:#999;
 	border-color:#ccc;
+	color:#333;
 }
-.view_battle .party .partyStatuList >li.type_buff {
+.view_battle .party .partyStatuList >li.type_buff >span {
 	background-color:#3c6;
 }
-.view_battle .party .partyStatuList >li.type_debuff {
+.view_battle .party .partyStatuList >li.type_debuff >span {
 	background-color:#c36;
 }
 .view_battle .party .partyStatuList >li >span.duration {
