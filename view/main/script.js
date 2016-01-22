@@ -1,10 +1,7 @@
 var MainView = React.createClass({
 	displayName: 'MainView',
-	instance: null,
 	
 	render: function() {
-Util.log('MainView render');
-
 		MainView.instance = this;
 		
 		return (React.createElement('div', {id:'main', className: 'relative'}, [
@@ -19,6 +16,7 @@ Util.log('MainView render');
 				*/
 			]),
 			React.createElement(MainView.ContentView, {ref:'contentView'}),
+			React.createElement(PopupView, {ref:'popupView'}),
 		]));
 	},
 	
@@ -35,8 +33,6 @@ Util.log('MainView render');
 			MainView.historys.push(target);
 		},
 		goBack: function() {
-Util.log('goBakc()');
-Util.log(MainView.historys);
 			if(MainView.historys.length <= 1) {
 				return;
 			}
@@ -48,6 +44,14 @@ Util.log(MainView.historys);
 			self.refs.contentView.setState({'view':target, 'props':{}});
 		},
 		
+		setPopupView: function(props) {
+			var self = this.instance;
+			
+			self.refs.popupView.setState(props);
+			
+			return self.refs.popupView;
+		},
+		
 	},
 });
 
@@ -57,8 +61,6 @@ MainView.ContentView = React.createClass({
 	},
 	
 	render: function() {
-Util.log('Content render');
-		
 		if(!this.state.view) {
 			return React.createElement('div', {className: 'content'});
 		}

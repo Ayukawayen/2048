@@ -4,6 +4,9 @@
 @import "view/main/style.css?0713";
 @import "view/main/layout.css?0713";
 
+@import "view/popup/style.css?0713";
+@import "view/popup/layout.css?0713";
+
 @import "view/battle/style.css?0713";
 @import "view/battle/layout.css?0713";
 @import "view/battleBoard/style.css?0713";

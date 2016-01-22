@@ -36,7 +36,7 @@ MemberListView.MemberItemView = React.createClass({
 		
 		node.addEventListener('click', this.onClick);
 		
-		node.addEventListener('dblclick', this.onLongPress);
+		//node.addEventListener('dblclick', this.onLongPress);
 		
 		node.addEventListener('mousedown', this.onPressStart);
 		node.addEventListener('mouseup', this.onPressCancel);

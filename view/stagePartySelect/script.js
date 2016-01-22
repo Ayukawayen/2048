@@ -16,6 +16,9 @@ var StagePartySelectView = React.createClass({
 			])
 		);
 	},
+	componentDidMount: function() {
+		Hint.show('隊員長按');
+	},
 
 	onPartyItemClick: function(item) {
 Util.log(item);

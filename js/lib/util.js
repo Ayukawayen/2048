@@ -89,6 +89,10 @@ Serializer.wrap = function(object, template) {
 	return object;
 };
 Serializer.unwrap = function(data, template) {
+	if(data === null) {
+		return data;
+	}
+	
 	if(template.type == 'string') {
 		return data;
 	}

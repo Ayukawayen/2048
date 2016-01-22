@@ -8,6 +8,9 @@ var MemberMainView = React.createClass({
 			])
 		);
 	},
+	componentDidMount: function() {
+		Hint.show('隊員長按');
+	},
 	
 });
 

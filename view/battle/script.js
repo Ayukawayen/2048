@@ -72,6 +72,10 @@ BattleView.FieldView = React.createClass({
 	render: function() {
 		var battle = this.props.battle;
 
+		if(this.props.state.isClear) {
+			Hint.show('Clear');
+		}
+		
 		var cn = 'field'
 			+ (battle.cntMove%2 ? ' odd' : ' even')
 			+ (this.props.state.isLose ? ' lose' : '')

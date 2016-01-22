@@ -20,6 +20,9 @@ Util.log(this.props);
 			])
 		);
 	},
+	componentDidMount: function() {
+		Hint.show('隊員長按');
+	},
 	
 	onItemClick: function(item) {
 		this.putSelectedIndex(item);
