@@ -113,10 +113,12 @@
 	color:#ff3;
 }
 
-.view_memberDetail .statu >span {
+.view_memberDetail .statu {
 	background-color:#999;
-	border-color:#ccc;
 	color:#333;
+}
+.view_memberDetail .statu >span {
+	border-color:#ccc;
 }
 .view_memberDetail .statu.type_buff >span {
 	background-color:#3c6;
