@@ -100,6 +100,7 @@ Battle.prototype.onMoved = function(move) {
 };
 
 Battle.prototype.postLogs = function(isForce) {
+	/*
 	if(!isForce && this.logs.length < 5) {
 		return;
 	}
@@ -119,6 +120,7 @@ Battle.prototype.postLogs = function(isForce) {
 	xhr.open('POST', url, true);
 	xhr.setRequestHeader('Content-type', 'application/json');
 	xhr.send(JSON.stringify(xhr.logs));
+	*/
 };
 Battle.prototype.onLogPosted = function() {
 	if(this.readyState==4) {
